@@ -40,3 +40,20 @@ export const getTotal = (items = [], discount = 0) => {
   }, 0);
   return total - (total * discount) / 100;
 };
+
+
+/**
+ * getScore возвращает сумму всех баллов успеваемости.
+ * @param {object} scores - Объект с успеваемостью, где ключ - это ник, а значение - балл.
+ * @returns {number} - Сумма всех баллов успеваемости.
+ */
+
+export function getScore(scores) {
+  let totalScore = 0;
+  for (let key in scores) {
+    if (scores.hasOwnProperty(key)) {
+      totalScore += scores[key];
+    }
+  }
+  return totalScore;
+}
