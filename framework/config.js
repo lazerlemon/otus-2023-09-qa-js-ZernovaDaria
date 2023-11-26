@@ -1,4 +1,4 @@
-const config = {
+export const config = {
   url: "https://bookstore.demoqa.com",
 };
 

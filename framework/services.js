@@ -1,5 +1,5 @@
 import supertest from "supertest";
-import config from "../framework/config";
+import config from "./config";
 const request = supertest(config.url);
 
 export async function authorization(username, password) {
